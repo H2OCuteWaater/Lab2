@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title> Диалог 2 </title>
+ <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+ <h1>Лабораторная работа 2</h1>
+<script>
+if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')){
+
+
+fun()
+
+function fun() {
+var age = prompt('Сколько вам лет?','Введите сюда ваш возраст');
+
+alert("Ваш возраст - "+age)
+if (!confirm('Вы уверены, что вам' + age + ' лет?')){
+fun()
+}
+}
+
+
+}
+alert("Спасибо, что уделили время")
+</script>
+</body>
+</html>

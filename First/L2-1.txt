@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>Мой эксперимент с CSS</title>
+ <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+ <h1> First </h1>
+<script>
+var admin, name;
+name = 'Vasiliy';
+admin = name;
+document.writeln(admin);
+</script> 
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>  Individ </title>
+</head>
+<body>
+
+    <div class="rangeline">
+        <div class="first" id="second">
+            <input type="range" min="0" max="9" value="0" class="range" id="range">
+        </div>
+	
+        <div class="first">
+
+            <div class="lol klav">
+                <div class="first">
+
+                    <button class="btn" onclick="clickk(0)">0</button>
+                    <button class="btn" onclick="clickk(1)">1</button>
+                    <button class="btn" onclick="clickk(2)">2</button>
+                    <button class="btn" onclick="clickk(3)">3</button>
+                    <button class="btn" onclick="clickk(4)">4</button>
+                    <button class="btn" onclick="clickk(5)">5</button>
+                    <button class="btn" onclick="clickk(6)">6</button>
+                    <button class="btn" onclick="clickk(7)">7</button>
+                    <button class="btn" onclick="clickk(8)">8</button>
+                    <button class="btn" onclick="clickk(9)">9</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+      function clickk(value) {
+        document.getElementById("range").value = value; 
+
+        if (value > 5) {
+          document.body.style.backgroundColor = "red";
+        } else {
+          document.body.style.backgroundColor = "white";
+        }
+      }
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+            width: 90%;
+            padding: 0;
+            margin: 0;
+        }
+
+	
+        .rangeline {
+            width: 100%;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 5px solid #8bbf00;
+            background: #d6eeff;
+        }
+
+        .range {
+            width: 80%;
+            height: 60px;
+            outline: none;
+            border: none;
+            color: #0000ff;
+        }
+
+        .range::-ms-fill-lower {
+            background: #ff8c00;
+        }
+
+        .first {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .lol {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .klav {
+        width:1000px;
+        }
+
+        .btn {
+            width: 70px;
+            height: 70px;
+            font-size: 30px;
+            font-weight: bold;
+            background: #c1b0ff;
+            display: inline-block;
+            text-align: center;
+            line-height: 70px;
+            border: 0;
+            margin: 5px;
+        }
+
+            .btn:hover {
+                background: #9932cc;
+            }
+
+            .btn:active {
+                background: #00bfff;
+            }
+
+        .indicator {
+            width: 70px;
+            height: 70px;
+            color: red;
+            margin:30px;
+            text-shadow: 0px 3px 3px #c71585;
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 70px;
+            border: 0;
+        }
+    </style>
+
+</body>
+</html>

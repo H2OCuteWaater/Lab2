@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     <meta charset="utf-8">
+    </head>
+
+    <body>
+      <div class="profile">
+        <img src="https://sun9-69.userapi.com/c638125/v638125408/ad4e/bRsPxDwo0lg.jpg" width='150px'>
+        <div class="info">
+          <h1><span id="profile_name">Миловангов Егор</span></h1>
+          <p>Возраст: <span id='profile_age'>20</span></p>
+          <p>Пол: <span id='profile_sex'>м.</span></p>
+        </div>
+      </div>
+
+      <form class="form">
+        <h2>Анкета</h2>
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input id="name" type="text" class="validate">
+        </div>
+        <div class="form-group">
+          <label for="age">Возраст</label>
+          <input id="age" type="text" class="validate">
+        </div>
+        <div class="form-group">
+          <label for="sex">Пол</label>
+          <input id="sex" type="text" class="validate">
+        </div>
+
+        <p>
+          <input type="checkbox" id="education">
+          <label for="education">Высшее образование</label>
+        </p>
+        <p>
+          <input type="checkbox" id="mathematic">
+          <label for="mathematic">Знание математики</label>
+        </p>
+        <p>
+          <input type="checkbox" id="asu">
+          <label for="asu">Знание АСУ ТП</label> </p>
+        <p>
+          <input type="checkbox" id="cutting">
+          <label for="cutting">Знание теории резания</label> </p>
+        <p>
+          <input type="checkbox" id="programming">
+          <label for="programming">Знание программирования</label>
+        </p>
+        <p>
+          <input type="button" name="btn" id='btn' value="Заполнить анкету" onclick="check()">
+        </p>
+        <div id="check_text">(если хотите узнать, подходите ли вы нам)</div>
+      </form>
+
+      <script>
+      	function check() {
+        	var check_text = document.getElementById("check_text");
+        	if (document.getElementById("mathematic").checked == false || document.getElementById("programming").checked == false) {
+            console.log('a')
+            var text= '<p>ВЫ НАМ НЕ НУЖНЫ!</p>'
+          	check_text.innerHTML = text;
+          	check_text.style.display = "block";
+        	} else {
+            var text ='<p>ВЫ НАМ ПОДОШЛИ!</p>'
+          	check_text.innerHTML = text;
+          	check_text.style.display = "block";
+        	}
+
+          let name = document.getElementById('name').value
+          document.getElementById('profile_name').textContent = name
+
+          let sex = document.getElementById('sex').value
+          document.getElementById('profile_sex').textContent = sex
+
+          let age = document.getElementById('age').value
+          document.getElementById('profile_age').textContent = age
+        }
+      </script>
+
+      <style type="text/css">
+        body {
+          background-color: #1f4068;
+        }
+        form {
+          background-color: #87CEFA;
+          padding: 16px;
+          margin: 16px;
+        }
+        .profile {
+          padding: 16px;
+          margin: 16px;
+          background-color: #C0C0C0;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          border: 2px solid gray;
+        }
+        .profile img {
+           box-shadow: 0 0 10px black;
+        }
+        .profile h1 {
+          color: #4B0082;
+        }
+        .profile p, h1 {
+          color: #800000;
+          margin: 0 0 4px 0;
+        }
+        .profile p {
+          font-size: 25px;
+        }
+        .info {
+          margin-left: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+        }
+        #btn:hover {
+          background-color: #DEB887;
+        }
+      </style>
+
+    </body>
+  </html>
